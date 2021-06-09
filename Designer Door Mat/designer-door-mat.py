@@ -5,9 +5,10 @@ def print_all_dash(times):
 	return str	
 
 def print_dot_horizontal(times):
-	str = ""
-	for i in range(times):
-		str += " "
+	str = "."
+	for i in range(times - 2):
+		str += '|' if (i == 0 or i % 3 == 0) else '.'
+	str += '.'
 	return str
 
 def generate_full_row(width, num_mid_section, msg = ""):
@@ -46,4 +47,5 @@ if __name__ == "__main__":
 			for j in range(col):
 				row_str = generate_full_row(col, num_dot_horizontal)	
 			print(row_str)
+
 	
