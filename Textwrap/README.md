@@ -18,8 +18,8 @@ The first line contains a string,  .
 The second line contains the width,  .
 
 **Constraints**
-1. 0 < len(string) < 1000
-2. 0 < max_width < len(string)
+- 0 < len(string) < 1000
+- 0 < max_width < len(string)
 
 **Sample Input 0**
 
