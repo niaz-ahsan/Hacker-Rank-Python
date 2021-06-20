@@ -19,5 +19,4 @@ def find_3_sum(user_collection, target):
 if __name__ == "__main__":
 	input = [-1,0,1,2,-1,-4]
 	target = 0
-	#print(find_3_sum(input, target))
 	print(find_3_sum(input, target))
