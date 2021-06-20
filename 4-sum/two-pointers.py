@@ -1,6 +1,8 @@
 def find_3_sum(user_collection, target):
 	result = []
 	for index in range(len(user_collection) - 1):
+		if index > 0 and user_collection[index] == user_collection[index - 1]:
+			continue
 		low = index + 1
 		high = len(user_collection) - 1
 		diff = target - user_collection[index]
@@ -19,6 +21,8 @@ def find_4_sum(user_collection, target):
 	user_collection.sort()
 	result = []
 	for index in range(len(user_collection)):
+		if index > 0 and user_collection[index] == user_collection[index - 1]:
+			continue	
 		sublist = user_collection[index+1::]
 		diff = target - user_collection[index]
 		sub_result = find_3_sum(sublist, diff)
@@ -32,4 +36,6 @@ def find_4_sum(user_collection, target):
 if __name__ == "__main__":
 	input = [1,0,-1,0,-2,2]
 	target = 0
+	#input = [2, 2, 2, 2, 2]
+	#target = 8
 	print(find_4_sum(input, target))
